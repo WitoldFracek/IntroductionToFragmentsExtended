@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment1">
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.introductiontofragments.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment1_to_tabsActivity2"
+            app:destination="@id/tabsActivity2" />
+        <action
+            android:id="@+id/action_fragment1_to_tabsActivity"
+            app:destination="@id/tabsActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/tabsActivity2"
+        android:name="com.example.introductiontofragments.TabsActivity2"
+        android:label="TabsActivity2" />
+    <activity
+        android:id="@+id/tabsActivity"
+        android:name="com.example.introductiontofragments.TabsActivity"
+        android:label="activity_tabs"
+        tools:layout="@layout/activity_tabs" />
+    <fragment
+        android:id="@+id/swipeFragment2"
+        android:name="com.example.introductiontofragments.SwipeFragment"
+        android:label="fragment_swipe"
+        tools:layout="@layout/fragment_swipe" />
+    <fragment
+        android:id="@+id/tabsFragment"
+        android:name="com.example.introductiontofragments.TabsFragment"
+        android:label="TabsFragment" />
+    <action android:id="@+id/action_global_fragment1" app:destination="@id/fragment1"/>
+    <action android:id="@+id/action_global_tabsFragment" app:destination="@id/tabsFragment"/>
+    <action android:id="@+id/action_global_swipeFragment2" app:destination="@id/swipeFragment2"/>
+</navigation>
